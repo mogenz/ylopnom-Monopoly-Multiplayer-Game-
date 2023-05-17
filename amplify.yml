@@ -4,6 +4,8 @@ frontend:
     preBuild:
       commands:
         - npm ci
+        - npm install
+        - npm run start
     # IMPORTANT - Please verify your build commands
     build:
       commands: []
