@@ -1,22 +1,18 @@
 version: 1
-frontend:
+backend:
   phases:
-    preBuild:
-      commands:
-        - npm ci
-        - npm install
-        - npm run start
-    # IMPORTANT - Please verify your build commands
+    commands:
+      - amplifyPush --simple
+ frontend:
+  phases:
+    commands:
+      - npm install
     build:
-      commands: 
-        - npm ci
-        - npm install
-        - npm run start
+      - npm run start
   artifacts:
-    # IMPORTANT - Please verify your build output directory
-    baseDirectory: /
+    baseDirectory: build
     files:
-      - '**/*'
+      - '**/**'
   cache:
     paths:
       - node_modules/**/*
