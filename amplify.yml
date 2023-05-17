@@ -8,7 +8,10 @@ frontend:
         - npm run start
     # IMPORTANT - Please verify your build commands
     build:
-      commands: []
+      commands: 
+        - npm ci
+        - npm install
+        - npm run start
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
